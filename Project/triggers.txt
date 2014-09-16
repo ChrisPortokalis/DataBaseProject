@@ -1,0 +1,30 @@
+CREATE TRIGGER maxEnroll
+AFTER INSERT ON Takes
+FOR EACH ROW
+BEGIN
+IF ((SELECT COUNT(*) FROM Takes AS t WHERE NEW.classId = t.classId) > (SELECT maxEnrollment FROM Class AS c WHERE c.classId = NEW.classId)) 
+THEN
+	DELETE FROM Takes WHERE classId = NEW.classId AND userId = NEW.userId
+END IF
+END
+
+
+
+
+
+
+
+
+
+
+
+CREATE TRIGGER maxEnroll
+AFTER INSERT ON Takes
+FOR EACH ROW
+BEGIN
+IF ((SELECT COUNT(*) FROM Takes AS t WHERE NEW.classId = t.classId) > (SELECT maxEnrollment FROM Class AS c WHERE c.classId = NEW.classId)) THEN
+	DELETE FROM Takes WHERE classId = NEW.classId AND userId = NEW.userId;
+ELSE IF ((SELECT COUNT(*) FROM Takes AS t WHERE NEW.classId = t.classId) = (SELECT maxEnrollment FROM Class AS c WHERE c.classId = NEW.classId)) THEN
+	UPDATE Class AS c SET open = 0 WHERE c.classId = NEW.classId;
+END IF;
+END;

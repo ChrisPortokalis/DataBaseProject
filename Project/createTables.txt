@@ -1,0 +1,83 @@
+CREATE TABLE User(
+	userName VARCHAR(200),
+	userId INT PRIMARY KEY,
+	student BIT,
+	instructor BIT,
+	administrator BIT,
+	salt VARCHAR(200),
+	passwordHash VARCHAR(200)
+);
+
+CREATE TABLE Student(
+	name VARCHAR(200),
+	userId INT REFERENCES User(userId),
+	major VARCHAR(200),
+	year INT,
+	PRIMARY KEY(userId)
+);
+
+CREATE TABLE Instructor(
+	name VARCHAR(200),
+	userId INT REFERENCES User(userId),
+	department VARCHAR(200),
+	tenure BIT,
+	PRIMARY KEY(userId)
+);
+
+CREATE TABLE Teaches(
+	userId INT REFERENCES Instructor(userId) ON UPDATE CASCADE ON DELETE CASCADE,
+	classId INT PRIMARY KEY
+);
+
+CREATE TABLE Class(
+	classId INT REFERENCES Teaches(classId) ON UPDATE CASCADE ON DELETE CASCADE,
+	className VARCHAR(200),
+	classNum VARCHAR(200),
+	sectionNum INT,
+	semester VARCHAR(200),
+	year INT,
+	creditHours INT,
+	maxEnrollment INT CHECK (maxEnrollment  <= (SELECT COUNT(*) FROM Takes NATURAL JOIN Class WHERE Takes.classId = Class.classId)),
+	open BIT,
+	finished BIT,
+	PRIMARY KEY(classId)
+);
+
+CREATE TABLE Takes(
+	userId INT REFERENCES Student(userId),
+	classId INT REFERENCES Class(classId) ON UPDATE CASCADE ON DELETE CASCADE,
+	grade VARCHAR(1) DEFAULT 'N',
+	UNIQUE(userId, classId)
+);
+
+
+CREATE TABLE Prerequisite(
+	requiringClassNum VARCHAR(200) REFERENCES Class(classNum) ON UPDATE CASCADE ON DELETE CASCADE,
+	requiredClassNum VARCHAR(200) REFERENCES Class(classNum) ON UPDATE CASCADE ON DELETE CASCADE,
+	UNIQUE(requiringClassNum, requiredClassNum)
+);
+
+CREATE TABLE Assignment(
+	classId INT REFERENCES Class(classId) ON UPDATE CASCADE ON DELETE CASCADE,
+	assignmentName VARCHAR(200),
+	numPoints INT
+);
+
+CREATE TABLE AssignmentGrade(
+	classId INT REFERENCES Assignment(classId) ON UPDATE CASCADE ON DELETE CASCADE,
+	assignmentName VARCHAR(200) REFERENCES Assignment(assignmentName) ON DELETE CASCADE ON UPDATE CASCADE,
+	studentId INT REFERENCES Student(userId) ON UPDATE CASCADE ON DELETE CASCADE,
+	points INT,
+	UNIQUE(assignmentName, studentId)
+);
+
+
+
+
+
+	
+	
+	
+	
+	
+	

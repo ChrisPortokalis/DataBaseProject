@@ -1,0 +1,17 @@
+DROP TABLE User;
+
+DROP TABLE Student;
+
+DROP TABLE Instructor;
+
+DROP TABLE Teaches;
+
+DROP TABLE Class;
+
+DROP TABLE Assignment;
+
+DROP TABLE Takes;
+ 
+DROP TABLE Prerequisite;
+
+DROP TABLE AssignmentGrade;

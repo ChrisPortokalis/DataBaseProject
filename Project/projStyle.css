@@ -1,0 +1,344 @@
+
+/* RULES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+form input[type="checkbox"]
+{
+	font-size: 15px;
+	text-align: left;
+
+
+
+}
+
+
+form
+{
+	font-size: 15px;
+	position: relative;
+}
+
+input.left
+{
+	float: left;
+}
+
+hr
+{
+	color:#99B2FF;
+}
+
+
+pre
+{
+	font-family: times;
+	font-size: 15px;
+	padding: 10px;
+
+
+}
+input
+{
+	border: 1px solid #777777;
+	margin: 2px;
+
+}
+
+
+body
+{
+	background-image: url(crBG.jpg);
+	font-family: "Times New Roman", Times, serif;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%
+
+
+}
+
+h1
+{
+	color: black;
+	position: relative;
+	text-align:center;
+	font-size:35px;
+	text-decoration: underline;
+	font-family: "Times New Roman", Times, serif;
+}
+
+
+h2
+{
+	text-align: center;
+	font-family:ariel;
+	color: #99B2FF;
+	text-decoration: underline;
+	font-size: 30px;
+	position: relative;
+}
+
+h3
+{
+	color: black;
+	text-align: center;
+	float: both;
+	font-family:ariel;
+	text-decoration: underline;
+	font-size: 20px;
+
+}
+
+h4
+{
+	color: black;
+	text-align: center;
+	font-family:ariel;
+	text-decoration: underline;
+	font-size: 20px;
+}
+
+li
+{
+	font-size: 15px;
+
+
+}
+
+/* CLASS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+p.right
+{
+	color: black;
+	font-family: ariel;
+	font-size: 15px;
+
+}
+
+p.floatright
+{
+	position: relative;
+	color:black;
+	font-family: ariel;
+	font-size: 15px;
+	
+}
+
+
+ul.square
+{
+	position: relative;
+	list-style-type:square;
+	list-style-position:inside;
+	font-size:15px;
+	font-family: courier;	
+	
+}
+
+ul li.sq1
+{
+	margin:3px;
+	text-align: left;
+	padding-left: 540px;
+	
+}
+
+ol.numerals
+{
+	font-size: 15px;
+	font-family: courier;
+	position: relative;
+	list-style-position: inside;
+	list-style-type: upper-roman;
+	
+}
+
+ol li.num1
+{
+	margin: 3px;
+	text-align: left;
+	padding-left: 540px;
+
+}
+
+img.border1
+{
+	border: 3px solid grey;
+	height: 250px;
+	width: 230px;
+}
+
+img.bordercy
+{
+	border: 3px solid cyan;
+	height: 220px;
+	width: 220px;
+
+}
+
+img.gpic
+{
+	height: 150px;
+	width:75px;
+}
+
+table.gtable
+{
+	background: #99B2FF;
+	text-align: center;
+	border: 5px solid grey;
+	width: 50%;	
+	height: 400px;
+	margin: auto;
+	float: both;
+	font: calibre;
+	border-collapse: collapse;
+
+	
+
+}
+tr.row1
+{
+	text-align: center;
+	margin: 0px;
+	font-size: 50px;
+	font-family: "Times New Roman", Times, serif;
+	text-decoration: underline;
+	border: 1px;
+}
+
+
+table.gtable tr
+{
+	text-align: center;
+	margin: 10px;
+	font-size: 20px;
+	font-family: "Times New Roman", Times, serif;
+	padding: 0px;
+	border: 1px;
+	
+
+}
+
+td.jhg
+{
+	height: 50px;
+	width: 160px;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	border: 1px solid black;
+	padding: 0px;
+}
+
+div.check
+{
+	text-align: left;
+	size: 10px 10px;
+	display: inline-block;
+	
+}
+
+
+
+textarea.comment
+{
+	height: 100px;
+	width: 400px;
+	resize: none;
+	font-family: "Times New Roman", Times, serif;
+}
+
+table.menu
+{
+	text-align: center;
+	border: 3px solid black;
+	width: 25%;
+	height: 100%;
+	font: calibre;
+	vertical-align: top;
+	border-collapse: collapse;
+	left: 0px;
+}
+
+table.menu th
+{
+	border: 3px solid black;
+	margin:	0px;
+	background-color: #5F9EA0;
+
+
+}
+
+table.menu tr
+{
+	
+	text-align: center;
+	margin: 0px;
+	font-size: 20px;
+	font-family: "Times New Roman", Times, serif;
+	padding: 0px;
+	border: 1px;
+}
+
+table.show
+{
+	text-align: center;
+	border: 2px black;
+	margin: auto;
+	font: calibre;
+	border-collapse: collapse;
+	padding: 10;
+
+
+}
+
+table.show th
+{
+	border: 3px solid black;
+	margin: auto;
+	background-color: #5F9EA0;
+
+
+
+}
+table.show tr
+{
+	padding: 10px;
+
+}
+
+div.sInfo
+{
+	float: left;
+	width: 15%;
+	height: 100px;
+	size: 100px;
+	background-color: #99B2FF;
+	position: fixed;
+	border-style: solid;
+	border-width: 5px;
+	border-color: grey;
+	border-collapse: collapse;
+	padding: 10px;
+}
+
+div.top
+{
+	position: fixed;
+	background-color: #99B2ff;
+	border-collapse: collapse;
+	vertical-align: top;
+	top: 0%;
+	left: -2px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: grey;
+	border-collapse: collapse;
+	width: 100%;
+	 z-index: 1;
+	
+}
+
+/* ID SELECTOR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+a:link {color:#880088; text-decoration:none;}
+a:visited {color:#888888; text-decoration:none;}
+a:hover {color:#FFFFFF; text-decoration:underline;}
+a:active {text-decoration:underline;}
